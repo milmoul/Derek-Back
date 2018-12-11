@@ -19,4 +19,4 @@ a.  Launch a PostgreSQL server on your machine.
 In order to do that you first need to install postgre: https://www.postgresql.org/download/. Follow the installer and check the pgAdmin 4 option to have it installed on your machine.
 Once the install is done launch the pgAdmin 4 app, it will open a browser tab. On the dashboard click add a new server.
 
-![Drag Racing](test.png)
+<img src="test.png"/>
