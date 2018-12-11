@@ -14,9 +14,9 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
 
 1.  Local deployment
 
-a.  Launch a PostgreSQL server on your machine.
+    a.  Launch a PostgreSQL server on your machine.
 
-In order to do that you first need to install postgre: https://www.postgresql.org/download/. Follow the installer and check the pgAdmin 4 option to have it installed on your machine.
-Once the install is done launch the pgAdmin 4 app, it will open a browser tab. On the dashboard click add a new server.
+    In order to do that you first need to install postgre: https://www.postgresql.org/download/. Follow the installer and check the pgAdmin 4 option to have it installed on your machine.
+    Once the install is done launch the pgAdmin 4 app, it will open a browser tab. On the dashboard click add a new server. Fill the information as shown below with the password being: > lemotdepasse
 
-<img src="db1.png"/><img src="db2.png"/>
+    <img src="db1.png"/><img src="db2.png"/>
