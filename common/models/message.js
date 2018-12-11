@@ -7,30 +7,7 @@ const callSendAPI = require('../custom_functions/messenger_api');
 const env = require('../../server/env');
 const socketFunctions = require('../../server/socketFunctions.js');
 const uniqid = require('uniqid');
-
-/* function callGraphAPI(sender_psid, response) {
-  let request_body = {
-    'messaging-type': 'RESPONSE',
-    'recipient': {
-      'id': sender_psid,
-    },
-    'message': {
-      'text': response,
-    },
-  };
-  request({
-    'uri': 'https://graph.facebook.com',
-    'qs': {'access_token': PAGE_ACCESS_TOKEN},
-    'method': 'GET',
-    'json': request_body,
-  }, (err, res, body) => {
-    if (!err) {
-      console.log('Got profile ', body);
-    } else {
-      console.error('Unable to get profile:' + err);
-    }
-  });
-} */
+// Se référer à la documentation de Facebook for Developers pour les fonctions utilisant l'API Messenfger : https://developers.facebook.com/docs/messenger-platform/send-messages
 
 module.exports = function(Message) {
   let app = require('../../server/server');
@@ -101,18 +78,6 @@ module.exports = function(Message) {
                 console.log('No solution');
               }
             });
-           /*  Solution.find({
-              include: {
-                relation: 'answerChoices',
-                scope: {
-                  where: {
-                    hub_id: best_hub.hub_id,
-                    doctor_id: patient.doctor_id,
-                  },
-                },
-                where: {answerChoices: {neq: []}},
-              },
-            }) */
           } else {
             console.log('No match found');
             QuestionHub.create({

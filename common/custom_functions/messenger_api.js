@@ -3,7 +3,7 @@
 const request = require('request');
 // eslint-disable-next-line max-len
 const PAGE_ACCESS_TOKEN = 'EAADvFZA80kBIBAHmq7D3yk3RV9hTfnh90Yo1w2ZB1pZCyqEPjB6PbhOZA1USIYS94cC4ZBpFkRmOUv1maVkyidZB6j3hK9nyHrZABEdkZBS1ynwKU7CrQCZB6EXC7kZAJYRMeUSp3kZCIsqfeMeGfAvf8qGV6cJjQzoShUAoZC3S6domtQZDZD';
-
+// Se référer à la documentation de Facebook for Developers pour les fonctions utilisant l'API Messenfger : https://developers.facebook.com/docs/messenger-platform/send-messages
 const callSendAPI = function(sender_psid, response) {
     // Construct the message body
   let request_body = {

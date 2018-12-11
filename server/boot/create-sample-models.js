@@ -4,29 +4,6 @@
 let faker = require('faker');
 
 module.exports = function(app) {
-  /*  app.dataSources.postGre.automigrate('Message', function(err) {
-     if (err) throw err;
-
-     app.models.Message.create([{
-       content: 'test',
-       senderPsid: '1A',
-     }], function(err, Messages) {
-       if (err) throw err;
-     });
-   });
-   app.dataSources.postGre.automigrate('Patient', function(err) {
-     if (err) throw err;
-
-     app.models.Patient.create([{
-       firstname: 'Emile',
-       lastname: 'Werther',
-       psid: '2122409984486185',
-     }], function(err, Patients) {
-       if (err) throw err;
-
-       console.log('Patient created: \n', Patients);
-     });
-   }); */
   let lbTables = ['Message', 'OperationType', 'Operation', 'Patient', 'QuestionHub', 'Question', 'Solution', 'Doctor', 'AnswerChoice'];
   app.dataSources.postGre.automigrate(lbTables, function(er) {
     if (er) throw er;
