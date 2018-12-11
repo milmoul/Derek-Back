@@ -3,9 +3,11 @@
 First we need to check you have the correct node version
 
 Now lets clone the repo, go to the folder you want the app to run and open a terminal in that folder
+
     git clone https://gitlab.paris-digital-lab.com/mokoloco/derek-back.git
 
 Now install the dependencies 
+
     npm install
 
 Now there are two ways to run the app, localy for dev purposes or on a remote server on heroku for production
