@@ -21,8 +21,26 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
 
     <img src="db1.png"/><img src="db2.png"/>
 
-    b. Launch the server
+    b. Setup the python environment
+
+    Create a vitual environment and activate it with:
+
+        python3 -m venv venv
+        source venv/bin/activate
+    
+    Now lets import spacy and the french language
+
+        pip3 install spacy
+        python3 -m spacy download fr_core_news_sm
+
+    c. Launch the server
 
     In the console in the app folder run:
 
         npm run devstart 
+    
+    And thats it you have the server running ready to accept incoming messages
+    To access the database you will have to launch the front (the tutorial to do that is in the read me of the front git repository)
+    To send the messages use the "send local message" request in the shared postman collection.
+
+    
