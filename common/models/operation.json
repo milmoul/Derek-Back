@@ -1,0 +1,44 @@
+{
+  "name": "Operation",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "operation_type": {
+      "type": "string",
+      "required": true
+    },
+    "patient_id": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "info": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operationType": {
+      "type": "belongsTo",
+      "model": "OperationType",
+      "foreignKey": "operation_type"
+    },
+    "patient": {
+      "type": "belongsTo",
+      "model": "Patient",
+      "foreignKey": "patient_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

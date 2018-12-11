@@ -1,0 +1,41 @@
+{
+  "name": "Question",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "patient_psid": {
+      "type": "string",
+      "required": true
+    },
+    "question_hub_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "patient": {
+      "type": "belongsTo",
+      "model": "Patient",
+      "foreignKey": "patient_psid"
+    },
+    "questionHub": {
+      "type": "belongsTo",
+      "model": "QuestionHub",
+      "foreignKey": "question_hub_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

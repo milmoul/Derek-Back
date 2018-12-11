@@ -1,0 +1,12 @@
+{
+  "postGre": {
+    "host": "0.0.0.0",
+    "port": 5432,
+    "url": "",
+    "database": "devdb",
+    "password": "lemotdepasse",
+    "name": "postGre",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}

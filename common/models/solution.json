@@ -1,0 +1,47 @@
+{
+  "name": "Solution",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "hub_id": {
+      "type": "string",
+      "required": true
+    },
+    "author_id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "questionHub": {
+      "type": "belongsTo",
+      "model": "QuestionHub",
+      "foreignKey": "hub_id"
+    },
+    "answerChoices": {
+      "type": "hasMany",
+      "model": "AnswerChoice",
+      "foreignKey": "solution_id"
+    },
+    "doctor": {
+      "type": "belongsTo",
+      "model": "Doctor",
+      "foreignKey": "author_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,12 @@
+{
+  "postGre": {
+    "host": "0.0.0.0",
+    "port": 5432,
+    "url": "postgres://utegarxlykpiae:417db6a138415535067f028a05d01f3a327e355bbaa848370544109251ec3abf@ec2-54-227-249-201.compute-1.amazonaws.com:5432/d2tlk5v824ks18",
+    "database": "practicedocker",
+    "password": "password",
+    "name": "postGre",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}

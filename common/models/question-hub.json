@@ -1,0 +1,52 @@
+{
+  "name": "QuestionHub",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "operation_id": {
+      "type": "string",
+      "required": true
+    },
+    "hasAnswer": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operationType": {
+      "type": "belongsTo",
+      "model": "OperationType",
+      "foreignKey": "operation_id"
+    },
+    "questions": {
+      "type": "hasMany",
+      "model": "Question",
+      "foreignKey": "question_hub_id"
+    },
+    "solutions": {
+      "type": "hasMany",
+      "model": "Solution",
+      "foreignKey": "hub_id"
+    },
+    "answerChoices": {
+      "type": "hasMany",
+      "model": "AnswerChoice",
+      "foreignKey": "hub_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

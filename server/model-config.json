@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Message": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "Patient": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "Question": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "QuestionHub": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "OperationType": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "Solution": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "Operation": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "Doctor": {
+    "dataSource": "postGre",
+    "public": true
+  },
+  "AnswerChoice": {
+    "dataSource": "postGre",
+    "public": true
+  }
+}

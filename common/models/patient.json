@@ -1,0 +1,51 @@
+{
+  "name": "Patient",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "psid": {
+      "type": "string",
+      "required": true
+    },
+    "doctor_id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operations": {
+      "type": "hasMany",
+      "model": "Operation",
+      "foreignKey": "patient_id"
+    },
+    "questions": {
+      "type": "hasMany",
+      "model": "Question",
+      "foreignKey": "patient_psid"
+    },
+    "doctor": {
+      "type": "belongsTo",
+      "model": "Doctor",
+      "foreignKey": "doctor_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,12 @@
+{
+  "postGre": {
+    "host": "",
+    "port": 5432,
+    "url": "postgres://qbfcejhualgucx:89ca3310968b1be6b05ec0dca5ffa42d6e59c6662829aa8432685dddea07c67f@ec2-54-75-231-3.eu-west-1.compute.amazonaws.com:5432/d1hbnopt0mj7l2",
+    "database": "",
+    "password": "",
+    "name": "postGre",
+    "user": "",
+    "connector": "postgresql"
+  }
+}
