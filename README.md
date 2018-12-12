@@ -1,5 +1,10 @@
 # Welcome to HelloDereks smart FAQ
 
+Requirements:
+- Have python 3 installed
+- Have pip3 installed
+- Have docker installed
+
 First we need to check you have the correct node version
 
 Now lets clone the repo, go to the folder you want the app to run and open a terminal in that folder
@@ -43,4 +48,7 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
     To access the database you will have to launch the front (the tutorial to do that is in the read me of the front git repository)
     To send the messages use the "send local message" request in the shared postman collection.
 
-    
+2. Remote deployment
+
+    a. Login to docker
+
