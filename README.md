@@ -52,3 +52,16 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
 
     a. Login to docker
 
+    First make sure you have docker installed (see this to install https://runnable.com/docker/install-docker-on-macos) and that it is currently running on your computer
+    In the console at the root folder of the app type
+
+        docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
+
+    b. Push the image to heroku
+
+    Now all thats left is to push the app to heroku and to release it, in the same console type:
+
+        heroku container:push web --app dty-derek
+        heroku container:release web --app dty-derek
+    
+    Thats it the app is now running on heroku
