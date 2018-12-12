@@ -52,18 +52,20 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
 
 2. Remote deployment
 
-    a. Login to docker
+    a. Login to heroku and docker
 
-    First make sure you have docker installed (see this to install https://runnable.com/docker/install-docker-on-macos) and that it is currently running on your computer
+    First login to heroku, in the same terminal window type:
+
+        heroku login
+    
+    It will prompt you to hit any key (do that) and it will open a browser tab and ask that you login to heroku (do that too)
+
+    Then make sure you have docker installed (see this to install https://runnable.com/docker/install-docker-on-macos) and that it is currently running on your computer
     In the same terminal window type:
 
         docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
 
     b. Push the image to heroku
-
-    First install the heroku cli:
-
-        npm install heroku
 
     Now all thats left is to push the app to heroku and to release it, in the same console type:
 
