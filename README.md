@@ -7,13 +7,10 @@ Requirements:
 
 First we need to check you have the correct node version
 
-Now lets clone the repo, go to the folder you want the app to run and open a terminal in that folder
+Now lets clone the repo, go to the folder where you want the app folder to be and open a terminal in that folder
 
     git clone https://gitlab.paris-digital-lab.com/mokoloco/derek-back.git
-
-Now install the dependencies 
-
-    npm install
+    cd derek-back
 
 Now there are two ways to run the app, localy for dev purposes or on a remote server on heroku for production
 
@@ -28,7 +25,7 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
 
     b. Setup the python environment
 
-    Create a vitual environment and activate it with:
+    Create a vitual environment and activate it with (still in the same terminal window as before):
 
         python3 -m venv venv
         source venv/bin/activate
@@ -40,7 +37,12 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
 
     c. Launch the server
 
+    First install the dependencies
     In the console in the app folder run:
+
+        npm install
+
+    Finally launch the server
 
         npm run devstart 
     
@@ -53,11 +55,15 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
     a. Login to docker
 
     First make sure you have docker installed (see this to install https://runnable.com/docker/install-docker-on-macos) and that it is currently running on your computer
-    In the console at the root folder of the app type
+    In the same terminal window type:
 
         docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
 
     b. Push the image to heroku
+
+    First install the heroku cli:
+
+        npm install heroku
 
     Now all thats left is to push the app to heroku and to release it, in the same console type:
 
