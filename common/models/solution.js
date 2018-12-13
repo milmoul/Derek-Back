@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+/* eslint-disable max-len */
 'use strict';
 let uniqid = require('uniqid');
 
