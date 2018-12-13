@@ -13,12 +13,12 @@ module.exports = function(Message) {
   let app = require('../../server/server');
 
   function handleMessage(message, patient, socket) {
-      // let nlp = renvoiunereponsestylesvpcaseraitcooltavu();
-      // Check if the message contains text
     let QuestionHub = app.models.QuestionHub;
     let Question = app.models.Question;
     let Solution = app.models.Solution;
     let AnswerChoice = app.models.AnswerChoice;
+
+    // Check if the message contains text
     QuestionHub.find({include: 'questions'}, (err, QuestionHubs) => {
       let hubs = [];
       QuestionHubs.forEach(hub => {
@@ -30,6 +30,7 @@ module.exports = function(Message) {
         hubs.push(usefullHub);
       });
       if (message.content) {
+        // The arguments passed to the python script is the received message and all the hubs in the database
         let options = {
           mode: 'text',
           scriptPath: __dirname,
@@ -38,7 +39,7 @@ module.exports = function(Message) {
 
         PythonShell.run('python_script.py', options, function(err, results) {
           if (err) throw err;
-            // results is an array consisting of messages collected during execution
+          // Results is an array consisting of objects: {hub_id:"id", match_percentage:0.3472}
           console.log('results: ', results);
           let best_hub = {hub_id: null, match_percent: 0};
           results.forEach(hub => {

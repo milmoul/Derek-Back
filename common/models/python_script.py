@@ -33,7 +33,6 @@ for hub in data:
                 if(lemma1.similarity(lemma2)>0.95):
                     intersection += 1 """
         ratio_list.append(len(set(input_list).intersection(set(match_list))) / float(len(set(input_list).union(set(match_list)))))
-        #print(doc.similarity(doc2))
     if(len(ratio_list)>0):
         hub_match_percent = sum(ratio_list)/float(len(ratio_list))
         print(json.dumps({"hub_id": hub['hub_id'], "hub_match_percent": hub_match_percent}))
