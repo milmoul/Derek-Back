@@ -35,10 +35,14 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
         pip3 install spacy
         python3 -m spacy download fr_core_news_sm
 
+    *If the command install spacy returns an error because of gcc then run the command:*
+
+        xcode-select --install 
+
     c. Launch the server
 
     First install the dependencies
-    In the console in the app folder run:
+    In the same console in the app folder run:
 
         npm install
 
@@ -54,8 +58,9 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
 
     a. Login to heroku and docker
 
-    First login to heroku, in the same terminal window type:
+    First login to heroku, in the same terminal window type, you will need the heroku CLI:
 
+        npm install heroku
         heroku login
     
     It will prompt you to hit any key (do that) and it will open a browser tab and ask that you login to heroku (do that too)
