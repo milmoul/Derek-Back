@@ -78,3 +78,9 @@ Now there are two ways to run the app, localy for dev purposes or on a remote se
         heroku container:release web --app dty-derek
     
     Thats it the app is now running on heroku
+
+3. Postman info
+
+    On the shared collection you have two requests one if the server is launched locally and another if it is launched on heroku
+    You can change the message sent or the the id of the sender by editing the environment varaibles.
+    
